@@ -10,13 +10,17 @@ int main() {
 		scanf("%d",&array[i]);
 	}
 	for(i=1;i<size;i++) {
-	  temp=array[i];
-	  j=i-1;
-	  while(j>=0 && temp<array[j]) {
-	    array[j+1]=array[j];
-	    j=j-1;
-	    }
-	    array[j+1]=temp;
-	    }
-	    return 0;
-	    }
+		temp=array[i];
+		j=i-1;
+	  	while(j>=0 && temp<array[j]) {
+	    		array[j+1]=array[j];
+			j=j-1;
+	    	}
+	    	array[j+1]=temp;
+	}
+	printf("Sorted Array\n");
+	for(i=0;i<size;i++){
+		printf("%d\n",array[i]);	
+	}
+	return 0;
+}
